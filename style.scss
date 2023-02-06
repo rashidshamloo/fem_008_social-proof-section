@@ -1,0 +1,278 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+//color variables
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9375rem;
+  color: $veryDarkMagenta;
+  background: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 0 top 0, left 0 bottom 0;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  .text-rank-container {
+    display: flex;
+    flex-direction: column;
+    .social-proof-text {
+      > * {
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.45rem;
+        letter-spacing: -1px;
+        line-height: 1.9rem;
+        font-weight: bold;
+        margin-top: 4rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: $darkGrayishMagenta;
+        font-weight: 500;
+        line-height: 1.6rem;
+        margin: 1.5rem 0 2rem 0;
+      }
+    }
+    .social-proof-rank {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .rank-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        background-color: $lightGrayishMagenta;
+        border-radius: 0.5rem;
+        margin: 0.5rem;
+
+        p {
+          font-weight: bold;
+          font-size: 1.05rem;
+          margin-top: 1rem;
+        }
+      }
+      .star-container {
+        width: 7.5rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      .star {
+        background-image: url("images/icon-star.svg");
+        background-size: 1.1rem;
+        height: 1.1rem;
+        width: 1.1rem;
+      }
+    }
+  }
+  .social-proof-testimonial-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .social-proof-testimonial {
+      width: 100%;
+      background-color: $veryDarkMagenta;
+      border-radius: 0.5rem;
+      margin: 0.5rem;
+      height: 15.5rem;
+      padding: 1.95rem;
+      color: $lightGrayishMagenta;
+      .testimonial-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+
+        .testimonial-text {
+          font-size: 1.05rem;
+          line-height: 1.4rem;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          margin-top: 1.5rem;
+        }
+        .testimonial-header {
+          display: flex;
+          align-items: center;
+          .testimonial-icon {
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-size: cover;
+          }
+          .testimonial-name {
+            margin-left: 1.1rem;
+            letter-spacing: 1px;
+            p:first-child {
+              font-weight: bold;
+            }
+            p:last-child {
+              color: $softPink;
+              margin-top: 0.4rem;
+            }
+          }
+          .colton {
+            background-image: url("images/image-colton.jpg");
+          }
+          .irene {
+            background-image: url("images/image-irene.jpg");
+          }
+          .anne {
+            background-image: url("images/image-anne.jpg");
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  p {
+    color: $veryDarkMagenta;
+    margin-bottom: 0.2rem;
+  }
+  i {
+    font-size: 0.9rem;
+  }
+  a {
+    color: $veryDarkMagenta;
+  }
+  a:hover {
+    color: $softPink;
+    transition: 700ms;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    html {
+      font-size: 3.2vw;
+    }
+  }
+@media only screen and (min-width: 769px) and (max-width: 1140px) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw top 0, left 50vw bottom 0;
+  }
+  .container {
+    max-width: 69.375rem;
+    min-height: 36.5rem;
+    padding: 0;
+    .text-rank-container {
+      flex-direction: row;
+      .social-proof-text {
+        flex-basis: 40%;
+        > * {
+          text-align: left;
+        }
+        h1 {
+          margin-top: 0;
+          font-size: 3.5rem;
+          line-height: 3rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+      }
+      .social-proof-rank {
+        flex-basis: 60%;
+        align-items: flex-end;
+        .rank-container {
+          margin: unset;
+          margin-bottom: 1.1rem;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 28rem;
+          height: 3.5rem;
+          p {
+            margin-top: 0;
+            font-size: 1.1rem;
+          }
+          > * {
+            margin-left: 2rem;
+          }
+        }
+        > :nth-child(1) {
+          margin-right: 5.5rem;
+        }
+        > :nth-child(2) {
+          margin-right: 2.75rem;
+        }
+      }
+    }
+    .social-proof-testimonial-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex: 1;
+      width: 100%;
+      .social-proof-testimonial {
+        height: 14.5rem;
+        margin: initial;
+        width: 21.875rem;
+      }
+      > :nth-child(1) {
+        margin-bottom: 2rem;
+      }
+      > :nth-child(2) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  footer {
+    margin-bottom: initial;
+    padding: 0.625rem;
+    p {
+      margin-bottom: 1rem;
+      @for $i from 1 through 4 {
+        span:nth-child(#{$i}) {
+          position: relative;
+          top: 0.2rem * $i;
+        }
+      }
+      a:last-child {
+        position: relative;
+        top: 0.2rem;
+      }
+    }
+  }
+}
